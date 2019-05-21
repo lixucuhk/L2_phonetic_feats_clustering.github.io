@@ -18,6 +18,7 @@ def extract_phn_IPA_wavfiles(clusternum):
 		text += temrfile.readline()[:-2]+')'
 		phnIPAs.append(text)
 		temrfile.close()
+		wavfiles.append(clusternum+'/'+senid+'_exact.wav')
 		wavfiles.append(clusternum+'/'+senid+'.wav')
 
 	return phnIPAs, wavfiles
@@ -64,9 +65,9 @@ wfile.write('  <h3>Case 1 (native-like patterns)</h3>\n \
     <table border="1">\n \
       <tr>\n \
         <td align="center" > </td>\n \
-        <td align="center" >Sample 1</td>\n \
-        <td align="center" >Sample 2</td>\n \
-        <td align="center" >Sample 3</td>\n \
+        <td align="center" colspan="2" >Sample 1</td>\n \
+        <td align="center" colspan="2" >Sample 2</td>\n \
+        <td align="center" colspan="2" >Sample 3</td>\n \
       </tr>\n')
 
 for item in types_subset:
@@ -78,14 +79,19 @@ for item in types_subset:
 	for i in range(3):
 		wfile.write('        <td align="center" >\n \
           <audio controls>\n \
-          <source src="'+files[i]+'" type="audio/wav">\n \
+          <source src="'+files[2*i]+'" type="audio/wav">\n \
+          </audio>\n \
+        </td>\n')
+		wfile.write('        <td align="center" >\n \
+          <audio controls>\n \
+          <source src="'+files[2*i+1]+'" type="audio/wav">\n \
           </audio>\n \
         </td>\n')
 
 	wfile.write('      </tr>\n')
 	wfile.write('      <tr>\n')
 	for i in range(3):
-		wfile.write('        <td align="center" >'+labels[i]+'</td>\n')
+		wfile.write('        <td align="center" colspan="2" >'+labels[i]+'</td>\n')
 	wfile.write('      </tr>\n')
 wfile.write('    </table>\n')
 
@@ -99,9 +105,9 @@ wfile.write('  <h3>Case 2 (sounds like a native pattern, but there is a small de
     <table border="1">\n \
       <tr>\n \
         <td align="center" > </td>\n \
-        <td align="center" >Sample 1</td>\n \
-        <td align="center" >Sample 2</td>\n \
-        <td align="center" >Sample 3</td>\n \
+        <td align="center" colspan="2" >Sample 1</td>\n \
+        <td align="center" colspan="2" >Sample 2</td>\n \
+        <td align="center" colspan="2" >Sample 3</td>\n \
       </tr>\n')
 
 for item in types_subset:
@@ -113,13 +119,18 @@ for item in types_subset:
 	for i in range(3):
 		wfile.write('        <td align="center" >\n \
           <audio controls>\n \
-          <source src="'+files[i]+'" type="audio/wav">\n \
+          <source src="'+files[2*i]+'" type="audio/wav">\n \
+          </audio>\n \
+        </td>\n')
+		wfile.write('        <td align="center" >\n \
+          <audio controls>\n \
+          <source src="'+files[2*i+1]+'" type="audio/wav">\n \
           </audio>\n \
         </td>\n')
 	wfile.write('      </tr>\n')
 	wfile.write('      <tr>\n')
 	for i in range(3):
-		wfile.write('        <td align="center" >'+labels[i]+'</td>\n')
+		wfile.write('        <td align="center" colspan="2" >'+labels[i]+'</td>\n')
 	wfile.write('      </tr>\n')
 wfile.write('    </table>\n')
 
@@ -133,9 +144,9 @@ wfile.write('  <h3>Case 3 (sounds like more than one native pattern)</h3>\n \
     <table border="1">\n \
       <tr>\n \
         <td align="center" > </td>\n \
-        <td align="center" >Sample 1</td>\n \
-        <td align="center" >Sample 2</td>\n \
-        <td align="center" >Sample 3</td>\n \
+        <td align="center" colspan="2" >Sample 1</td>\n \
+        <td align="center" colspan="2" >Sample 2</td>\n \
+        <td align="center" colspan="2" >Sample 3</td>\n \
       </tr>\n')
 
 for item in types_subset:
@@ -147,13 +158,18 @@ for item in types_subset:
 	for i in range(3):
 		wfile.write('        <td align="center" >\n \
           <audio controls>\n \
-          <source src="'+files[i]+'" type="audio/wav">\n \
+          <source src="'+files[2*i]+'" type="audio/wav">\n \
+          </audio>\n \
+        </td>\n')
+		wfile.write('        <td align="center" >\n \
+          <audio controls>\n \
+          <source src="'+files[2*i+1]+'" type="audio/wav">\n \
           </audio>\n \
         </td>\n')
 	wfile.write('      </tr>\n')
 	wfile.write('      <tr>\n')
 	for i in range(3):
-		wfile.write('        <td align="center" >'+labels[i]+'</td>\n')
+		wfile.write('        <td align="center" colspan="2" >'+labels[i]+'</td>\n')
 	wfile.write('      </tr>\n')
 wfile.write('    </table>\n')
 
@@ -167,9 +183,9 @@ wfile.write('  <h3>Case 4 (large deviation from a native pattern)</h3>\n \
     <table border="1">\n \
       <tr>\n \
         <td align="center" > </td>\n \
-        <td align="center" >Sample 1</td>\n \
-        <td align="center" >Sample 2</td>\n \
-        <td align="center" >Sample 3</td>\n \
+        <td align="center" colspan="2" >Sample 1</td>\n \
+        <td align="center" colspan="2" >Sample 2</td>\n \
+        <td align="center" colspan="2" >Sample 3</td>\n \
       </tr>\n')
 
 for item in types_subset:
@@ -181,13 +197,18 @@ for item in types_subset:
 	for i in range(3):
 		wfile.write('        <td align="center" >\n \
           <audio controls>\n \
-          <source src="'+files[i]+'" type="audio/wav">\n \
+          <source src="'+files[2*i]+'" type="audio/wav">\n \
+          </audio>\n \
+        </td>\n')
+		wfile.write('        <td align="center" >\n \
+          <audio controls>\n \
+          <source src="'+files[2*i+1]+'" type="audio/wav">\n \
           </audio>\n \
         </td>\n')
 	wfile.write('      </tr>\n')
 	wfile.write('      <tr>\n')
 	for i in range(3):
-		wfile.write('        <td align="center" >'+labels[i]+'</td>\n')
+		wfile.write('        <td align="center" colspan="2" >'+labels[i]+'</td>\n')
 	wfile.write('      </tr>\n')
 wfile.write('    </table>\n')
 
@@ -201,9 +222,9 @@ wfile.write('  <h3>Case 5 (far away from all native patterns)</h3>\n \
     <table border="1">\n \
       <tr>\n \
         <td align="center" > </td>\n \
-        <td align="center" >Sample 1</td>\n \
-        <td align="center" >Sample 2</td>\n \
-        <td align="center" >Sample 3</td>\n \
+        <td align="center" colspan="2" >Sample 1</td>\n \
+        <td align="center" colspan="2" >Sample 2</td>\n \
+        <td align="center" colspan="2" >Sample 3</td>\n \
       </tr>\n')
 
 for item in types_subset:
@@ -215,13 +236,18 @@ for item in types_subset:
 	for i in range(3):
 		wfile.write('        <td align="center" >\n \
           <audio controls>\n \
-          <source src="'+files[i]+'" type="audio/wav">\n \
+          <source src="'+files[2*i]+'" type="audio/wav">\n \
+          </audio>\n \
+        </td>\n')
+		wfile.write('        <td align="center" >\n \
+          <audio controls>\n \
+          <source src="'+files[2*i+1]+'" type="audio/wav">\n \
           </audio>\n \
         </td>\n')
 	wfile.write('      </tr>\n')
 	wfile.write('      <tr>\n')
 	for i in range(3):
-		wfile.write('        <td align="center" >'+labels[i]+'</td>\n')
+		wfile.write('        <td align="center" colspan="2" >'+labels[i]+'</td>\n')
 	wfile.write('      </tr>\n')
 
 wfile.write('    </table>\n \
