@@ -67,7 +67,7 @@ wfile.write('  <h3>Case 1 (native-like patterns)</h3>\n \
         <td align="center" >Sample 1</td>\n \
         <td align="center" >Sample 2</td>\n \
         <td align="center" >Sample 3</td>\n \
-      </tr>)\n')
+      </tr>\n')
 
 for item in types_subset:
 	ptype = item
@@ -102,7 +102,7 @@ wfile.write('  <h3>Case 2 (sounds like a native pattern, but there is a small de
         <td align="center" >Sample 1</td>\n \
         <td align="center" >Sample 2</td>\n \
         <td align="center" >Sample 3</td>\n \
-      </tr>)\n')
+      </tr>\n')
 
 for item in types_subset:
 	ptype = item
@@ -136,7 +136,7 @@ wfile.write('  <h3>Case 3 (sounds like more than one native pattern)</h3>\n \
         <td align="center" >Sample 1</td>\n \
         <td align="center" >Sample 2</td>\n \
         <td align="center" >Sample 3</td>\n \
-      </tr>)\n')
+      </tr>\n')
 
 for item in types_subset:
 	ptype = item
@@ -170,7 +170,7 @@ wfile.write('  <h3>Case 4 (large deviation from a native pattern)</h3>\n \
         <td align="center" >Sample 1</td>\n \
         <td align="center" >Sample 2</td>\n \
         <td align="center" >Sample 3</td>\n \
-      </tr>)\n')
+      </tr>\n')
 
 for item in types_subset:
 	ptype = item
@@ -204,7 +204,7 @@ wfile.write('  <h3>Case 5 (far away from all native patterns)</h3>\n \
         <td align="center" >Sample 1</td>\n \
         <td align="center" >Sample 2</td>\n \
         <td align="center" >Sample 3</td>\n \
-      </tr>)\n')
+      </tr>\n')
 
 for item in types_subset:
 	ptype = item
