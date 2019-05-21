@@ -87,6 +87,7 @@ for item in types_subset:
 	for i in range(3):
 		wfile.write('        <td align="center" >'+labels[i]+'</td>\n')
 	wfile.write('      </tr>\n')
+wfile.write('    </table>\n')
 
 # Case 2
 types_subset = []
@@ -120,6 +121,7 @@ for item in types_subset:
 	for i in range(3):
 		wfile.write('        <td align="center" >'+labels[i]+'</td>\n')
 	wfile.write('      </tr>\n')
+wfile.write('    </table>\n')
 
 # Case 3
 types_subset = []
@@ -153,6 +155,7 @@ for item in types_subset:
 	for i in range(3):
 		wfile.write('        <td align="center" >'+labels[i]+'</td>\n')
 	wfile.write('      </tr>\n')
+wfile.write('    </table>\n')
 
 # Case 4
 types_subset = []
@@ -186,6 +189,7 @@ for item in types_subset:
 	for i in range(3):
 		wfile.write('        <td align="center" >'+labels[i]+'</td>\n')
 	wfile.write('      </tr>\n')
+wfile.write('    </table>\n')
 
 # Case 5
 types_subset = []
